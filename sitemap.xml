@@ -6,7 +6,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://ekpesakingdom.netlify.app/</loc>
-    <lastmod>2025-01-13</lastmod>
+    <lastmod>2025-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -24,7 +24,7 @@
   <!-- History Page -->
   <url>
     <loc>https://ekpesakingdom.netlify.app/history.html</loc>
-    <lastmod>2025-01-13</lastmod>
+    <lastmod>2025-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -37,7 +37,7 @@
   <!-- Gallery Page -->
   <url>
     <loc>https://ekpesakingdom.netlify.app/gallery.html</loc>
-    <lastmod>2025-01-13</lastmod>
+    <lastmod>2025-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -70,7 +70,7 @@
   <!-- Video Page -->
   <url>
     <loc>https://ekpesakingdom.netlify.app/video.html</loc>
-    <lastmod>2025-01-13</lastmod>
+    <lastmod>2025-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <video:video>
@@ -79,7 +79,7 @@
       <video:description>Immersive video presentation showcasing Ekpesa Kingdom's rich heritage, culture, and traditions spanning over 800 years of history.</video:description>
       <video:content_loc>https://ekpesakingdom.netlify.app/assets/ekpesa_video.mp4</video:content_loc>
       <video:duration>300</video:duration>
-      <video:publication_date>2025-01-13</video:publication_date>
+      <video:publication_date>2025-11-13</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
       <video:tag>Ekpesa Kingdom</video:tag>
       <video:tag>Nigerian culture</video:tag>
@@ -92,7 +92,7 @@
   <!-- Kingship Page -->
   <url>
     <loc>https://ekpesakingdom.netlify.app/kingship.html</loc>
-    <lastmod>2025-01-13</lastmod>
+    <lastmod>2025-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -100,7 +100,7 @@
   <!-- Structure Page -->
   <url>
     <loc>https://ekpesakingdom.netlify.app/structure.html</loc>
-    <lastmod>2025-01-13</lastmod>
+    <lastmod>2025-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -108,7 +108,7 @@
   <!-- Governance Page -->
   <url>
     <loc>https://ekpesakingdom.netlify.app/governance.html</loc>
-    <lastmod>2025-01-13</lastmod>
+    <lastmod>2025-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -116,7 +116,7 @@
   <!-- Okpameri Page -->
   <url>
     <loc>https://ekpesakingdom.netlify.app/okpameri.html</loc>
-    <lastmod>2025-01-13</lastmod>
+    <lastmod>2025-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -124,7 +124,7 @@
   <!-- Geography Page -->
   <url>
     <loc>https://ekpesakingdom.netlify.app/geography.html</loc>
-    <lastmod>2025-01-13</lastmod>
+    <lastmod>2025-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

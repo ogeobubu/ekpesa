@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Okpameri Communities - Ekpesa Kingdom</title>
+  <meta name="description" content="Explore the 22 culturally connected Okpameri communities that share language and customs across Akoko-Edo Local Government Area." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.png" />
+  <style>
+    .okpameri-page {
+      background: var(--bg);
+      padding: 2rem 1rem;
+      min-height: 100vh;
+    }
+    .okpameri-header {
+      max-width: 1200px;
+      margin: 0 auto 3rem;
+      text-align: center;
+    }
+    .communities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    .community-column {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    .community-header {
+      background: linear-gradient(135deg, var(--primary), #0d4d36);
+      color: white;
+      padding: 1rem;
+      border-radius: var(--radius);
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .community-list {
+      list-style: none;
+      padding: 0;
+    }
+    .community-list li {
+      background: var(--bg);
+      padding: 0.8rem 1rem;
+      margin: 0.5rem 0;
+      border-radius: 8px;
+      border-left: 4px solid var(--accent);
+      transition: var(--transition);
+    }
+    .community-list li:hover {
+      background: #f0f4f8;
+      transform: translateX(5px);
+    }
+    .community-list li strong {
+      color: var(--primary);
+    }
+    .statistics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    .stat-card {
+      background: linear-gradient(135deg, var(--accent), #b8952f);
+      color: white;
+      padding: 2rem;
+      border-radius: var(--radius);
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .heritage-section {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    .founding-brothers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .founder-card {
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      border-left: 4px solid var(--accent);
+    }
+    .demographics {
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Ekpesa Kingdom logo" class="logo" />
+        <div>
+          <h1 class="site-title"><a href="index.html" style="color: inherit; text-decoration: none;">Ekpesa Kingdom</a></h1>
+          <p class="tagline">The Land of Upright People</p>
+        </div>
+      </div>
+
+      <nav aria-label="Primary navigation" class="main-nav">
+        <button id="menuBtn" aria-expanded="false" aria-controls="primaryMenu">☰</button>
+        <ul id="primaryMenu" class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="video.html">Video</a></li>
+          <li><a href="kingship.html">Kingship</a></li>
+          <li><a href="structure.html">Structure</a></li>
+          <li><a href="governance.html">Governance</a></li>
+          <li><a href="okpameri.html" class="active">Okpameri</a></li>
+          <li><a href="geography.html">Geography</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="okpameri-page" role="main">
+    <div class="okpameri-header">
+      <h1>🌍 Okpameri — The Land & Its People</h1>
+      <p>"We are one" — Discover the 22 culturally connected communities that share language and customs across Akoko-Edo Local Government Area.</p>
+    </div>
+
+    <div class="wrap">
+      <div class="statistics">
+        <div class="stat-card">
+          <div class="stat-number">22</div>
+          <div>Connected Communities</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">4</div>
+          <div>Founding Brothers</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">261,567</div>
+          <div>Akoko-Edo Population (2006)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">800+</div>
+          <div>Years of Heritage</div>
+        </div>
+      </div>
+
+      <div class="heritage-section">
+        <h2>🏛️ The Four Founding Brothers</h2>
+        <p>The Okpameri people trace their heritage to four brothers who were part of Oranmiyan's entourage in the 13th century. These founders established communities that remain today:</p>
+        
+        <div class="founding-brothers">
+          <div class="founder-card">
+            <h3>⚡ Ekpesa</h3>
+            <p><strong>Meaning:</strong> "We forbid curses"</p>
+            <p>Founder of Ekpesa Kingdom, known for establishing peaceful traditions and agricultural practices. Descendants remain in the forest areas where they first settled.</p>
+          </div>
+          
+          <div class="founder-card">
+            <h3>🏔️ Onumu</h3>
+            <p><strong>Meaning:</strong> Settled in rocky surroundings</p>
+            <p>Established communities in rocky terrain, adapting to the challenging landscape while maintaining cultural traditions.</p>
+          </div>
+          
+          <div class="founder-card">
+            <h3>🗻 Somorika</h3>
+            <p><strong>Meaning:</strong> Mountain cave dwellers</p>
+            <p>Moved to higher elevations and caves, creating unique mountain communities that preserved ancient traditions.</p>
+          </div>
+          
+          <div class="founder-card">
+            <h3>🌊 Ojirami</h3>
+            <p><strong>Meaning:</strong> Beyond the rivers</p>
+            <p>Crossed major rivers to establish riverside communities that became important trade and cultural centers.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="communities-grid">
+        <div class="community-column">
+          <div class="community-header">
+            <h3>🏘️ Primary Communities</h3>
+          </div>
+          <ul class="community-list">
+            <li><strong>Aiyegunle (Osi)</strong> - Northern community</li>
+            <li><strong>Lampese</strong> - Agricultural center</li>
+            <li><strong>Bekuma</strong> - Traditional village</li>
+            <li><strong>Makeke (Umanukeke)</strong> - Cultural hub</li>
+            <li><strong>Dagbala</strong> - Hilltop settlement</li>
+            <li><strong>Ogbe</strong> - Community center</li>
+            <li><strong>Ekor</strong> - Valley community</li>
+            <li><strong>Ogugu</strong> - Traditional center</li>
+            <li><strong>Ekpe</strong> - Cultural preserve</li>
+            <li><strong>Ojah (Oza)</strong> - Border community</li>
+          </ul>
+        </div>
+
+        <div class="community-column">
+          <div class="community-header">
+            <h3>🏛️ Central Communities</h3>
+          </div>
+          <ul class="community-list">
+            <li><strong>Ekpesa</strong> - The founding kingdom</li>
+            <li><strong>Ojirami</strong> - Riverside settlement</li>
+            <li><strong>Eshawa</strong> - Cultural center</li>
+            <li><strong>Somorika</strong> - Mountain community</li>
+            <li><strong>Sasaro</strong> - Traditional village</li>
+            <li><strong>Ibillo</strong> - Community hub</li>
+            <li><strong>Ugboshi-Afe</strong> - Lower settlement</li>
+            <li><strong>Ugboshi-Ele (Ayanmi)</strong> - Upper community</li>
+            <li><strong>Ikiran-Ile (Afeyeh)</strong> - Inland community</li>
+            <li><strong>Ikiran-Oke (Ebune)</strong> - Hilltop village</li>
+          </ul>
+        </div>
+
+        <div class="community-column">
+          <div class="community-header">
+            <h3>🏞️ Additional Communities</h3>
+          </div>
+          <ul class="community-list">
+            <li><strong>Onumu</strong> - Rocky settlement</li>
+            <li><strong>Imoga (Uma)</strong> - Traditional community</li>
+            <li><strong>Additional Villages</strong> - Plus other Okpameri communities</li>
+          </ul>
+          
+          <div style="margin-top: 2rem;">
+            <h4>🌐 Diaspora Communities</h4>
+            <p>Okpameri people have established communities worldwide, maintaining cultural connections with their ancestral homeland while contributing to global communities.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="demographics">
+        <h2>📊 Population & Demographics</h2>
+        <div class="grid-2">
+          <div>
+            <h3>2006 Census Data</h3>
+            <ul>
+              <li><strong>Akoko-Edo Total Population:</strong> 261,567</li>
+              <li><strong>Okpameri People:</strong> Majority population</li>
+              <li><strong>Geographic Coverage:</strong> Throughout Akoko-Edo LGA</li>
+              <li><strong>Language Group:</strong> Okpameri language speakers</li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3>Cultural Characteristics</h3>
+            <ul>
+              <li><strong>Language:</strong> Shared Okpameri dialect</li>
+              <li><strong>Religion:</strong> Traditional and Christian practices</li>
+              <li><strong>Economy:</strong> Agriculture, trade, and modern commerce</li>
+              <li><strong>Unity:</strong> Maintained cultural bonds despite geographic spread</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>🗻 Geographic Features</h2>
+        <p>The Okpameri region features diverse landscapes that shaped community development:</p>
+        
+        <div class="grid-2">
+          <div class="card">
+            <h3>🏔️ Kukuruku Hills</h3>
+            <p>The historic Kukuruku Hills form the backbone of the region, providing natural defense and scenic beauty. These hills have been home to Okpameri communities for centuries.</p>
+          </div>
+          
+          <div class="card">
+            <h3>🌊 River Systems</h3>
+            <p>Major rivers and tributaries flow through the region, supporting agriculture and transportation. These waterways were crucial for the founding brothers' settlement patterns.</p>
+          </div>
+          
+          <div class="card">
+            <h3>🌾 Fertile Plains</h3>
+            <p>Extensive fertile plains support the agricultural base that has sustained Okpameri communities for over 800 years. Yam, cassava, and grain cultivation thrives here.</p>
+          </div>
+          
+          <div class="card">
+            <h3>🌲 Forest Areas</h3>
+            <p>Forest regions, particularly where Ekpesa descendants settled, provide resources and have preserved ancient traditions and customs.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section alt">
+        <h2>🤝 Cultural Unity & Modern Connections</h2>
+        <p>Despite geographic distribution, the Okpameri people maintain strong cultural unity:</p>
+        
+        <ul>
+          <li><strong>Language Preservation:</strong> Continued use of Okpameri language across all communities</li>
+          <li><strong>Traditional Festivals:</strong> Shared celebrations that unite communities</li>
+          <li><strong>Marriage Traditions:</strong> Inter-community marriages that strengthen bonds</li>
+          <li><strong>Economic Cooperation:</strong> Trade and business relationships between communities</li>
+          <li><strong>Cultural Exchange:</strong> Regular gatherings and cultural events</li>
+          <li><strong>Diaspora Connections:</strong> Global Okpameri communities maintaining homeland ties</li>
+          <li><strong>Historical Remembrance:</strong> Honoring the founding brothers and their legacy</li>
+        </ul>
+        
+        <p class="muted">This unity, established through the sacred oath taken by the four founding brothers, continues to guide Okpameri communities in maintaining peace and mutual respect across all 22 communities and beyond.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h4>Ekpesa Kingdom</h4>
+          <p>© 2025 Ekpesa Kingdom. All rights reserved.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><a href="mailto:info@ekpesakingdom.ng">info@ekpesakingdom.ng</a></p>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <p><a href="assets/EPKESA_PDF.pdf" download>Download EPKESA PDF</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

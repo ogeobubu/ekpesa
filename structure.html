@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Community Structure - Ekpesa Kingdom</title>
+  <meta name="description" content="Understand the organizational structure of Ekpesa community with its three quarters and leadership system." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.png" />
+  <style>
+    .structure-page {
+      background: var(--bg);
+      padding: 2rem 1rem;
+      min-height: 100vh;
+    }
+    .structure-header {
+      max-width: 1200px;
+      margin: 0 auto 3rem;
+      text-align: center;
+    }
+    .quarters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    .quarter-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: var(--transition);
+    }
+    .quarter-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    .quarter-header {
+      background: linear-gradient(135deg, var(--primary), #0d4d36);
+      color: white;
+      padding: 1rem;
+      border-radius: var(--radius);
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .leadership-triad {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .leadership-role {
+      background: var(--bg);
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      border-left: 4px solid var(--accent);
+    }
+    .hierarchy-chart {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .hierarchy-level {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem 0;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .hierarchy-box {
+      background: var(--primary);
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      min-width: 150px;
+    }
+    .statistics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .stat-box {
+      background: linear-gradient(135deg, var(--accent), #b8952f);
+      color: white;
+      padding: 2rem;
+      border-radius: var(--radius);
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Ekpesa Kingdom logo" class="logo" />
+        <div>
+          <h1 class="site-title"><a href="index.html" style="color: inherit; text-decoration: none;">Ekpesa Kingdom</a></h1>
+          <p class="tagline">The Land of Upright People</p>
+        </div>
+      </div>
+
+      <nav aria-label="Primary navigation" class="main-nav">
+        <button id="menuBtn" aria-expanded="false" aria-controls="primaryMenu">☰</button>
+        <ul id="primaryMenu" class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="video.html">Video</a></li>
+          <li><a href="kingship.html">Kingship</a></li>
+          <li><a href="structure.html" class="active">Structure</a></li>
+          <li><a href="governance.html">Governance</a></li>
+          <li><a href="okpameri.html">Okpameri</a></li>
+          <li><a href="geography.html">Geography</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="structure-page" role="main">
+    <div class="structure-header">
+      <h1>Community Structure</h1>
+      <p>Understanding the organizational framework that governs Ekpesa Kingdom through its three quarters and traditional leadership system.</p>
+    </div>
+
+    <div class="wrap">
+      <div class="statistics">
+        <div class="stat-box">
+          <div class="stat-number">3</div>
+          <div>Community Quarters</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">47</div>
+          <div>Titled Chiefs (Ojas)</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">9</div>
+          <div>Leadership Roles</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">1</div>
+          <div>Ekala Chief</div>
+        </div>
+      </div>
+
+      <div class="quarters-grid">
+        <div class="quarter-card">
+          <div class="quarter-header">
+            <h3>🏛️ Ekulezu Quarters</h3>
+          </div>
+          <p>This quarter forms one of the three main administrative divisions of Ekpesa, contributing to the kingdom's governance structure.</p>
+          <div class="leadership-triad">
+            <div class="leadership-role">
+              <h4>Dezi</h4>
+              <p>Quarter Head</p>
+            </div>
+            <div class="leadership-role">
+              <h4>Orina</h4>
+              <p>Cultural Head</p>
+            </div>
+            <div class="leadership-role">
+              <h4>Orio</h4>
+              <p>Traditional Head</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="quarter-card">
+          <div class="quarter-header">
+            <h3>🏛️ Ubianagba Quarters</h3>
+          </div>
+          <p>The central administrative quarter that houses key traditional institutions and serves as a hub for community decision-making.</p>
+          <div class="leadership-triad">
+            <div class="leadership-role">
+              <h4>Dezi</h4>
+              <p>Quarter Head</p>
+            </div>
+            <div class="leadership-role">
+              <h4>Orina</h4>
+              <p>Cultural Head</p>
+            </div>
+            <div class="leadership-role">
+              <h4>Orio</h4>
+              <p>Traditional Head</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="quarter-card">
+          <div class="quarter-header">
+            <h3>🏛️ Ayanva Quarters</h3>
+          </div>
+          <p>The third quarter that maintains the kingdom's cultural heritage and ensures the preservation of traditional customs.</p>
+          <div class="leadership-triad">
+            <div class="leadership-role">
+              <h4>Dezi</h4>
+              <p>Quarter Head</p>
+            </div>
+            <div class="leadership-role">
+              <h4>Orina</h4>
+              <p>Cultural Head</p>
+            </div>
+            <div class="leadership-role">
+              <h4>Orio</h4>
+              <p>Traditional Head</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hierarchy-chart">
+        <h2>Leadership Hierarchy</h2>
+        <p>The Ekpesa governance structure follows a hierarchical system with clear roles and responsibilities:</p>
+        
+        <div class="hierarchy-level">
+          <div class="hierarchy-box">OBA (Monarch)</div>
+        </div>
+        
+        <div class="hierarchy-level">
+          <div class="hierarchy-box">47 Ojas (Chiefs)</div>
+          <div class="hierarchy-box">Ekala Chief</div>
+        </div>
+        
+        <div class="hierarchy-level">
+          <div class="hierarchy-box">3 Dezi (Quarter Heads)</div>
+        </div>
+        
+        <div class="hierarchy-level">
+          <div class="hierarchy-box">6 Orinas & Orio (Cultural & Traditional Heads)</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Quarter Administration</h2>
+        <p>Each quarter maintains a leadership triad that ensures effective governance and cultural preservation:</p>
+        
+        <div class="grid-2">
+          <div class="card">
+            <h3>Dezi — Quarter Head</h3>
+            <p>Responsible for administrative oversight and day-to-day governance of the quarter. The Dezi coordinates activities and ensures the implementation of decisions made by the OBA.</p>
+            <ul>
+              <li>Administrative coordination</li>
+              <li>Conflict resolution</li>
+              <li>Resource allocation</li>
+              <li>Community development</li>
+            </ul>
+          </div>
+          
+          <div class="card">
+            <h3>Orina — Cultural Head</h3>
+            <p>Guardian of cultural traditions and customs within the quarter. The Orina ensures that cultural practices are preserved and passed down to future generations.</p>
+            <ul>
+              <li>Cultural preservation</li>
+              <li>Ceremony organization</li>
+              <li>Traditional knowledge</li>
+              <li>Community identity</li>
+            </ul>
+          </div>
+          
+          <div class="card">
+            <h3>Orio — Traditional Head</h3>
+            <p>Responsible for maintaining traditional customs and spiritual matters. The Orio works closely with the Orina to ensure cultural continuity.</p>
+            <ul>
+              <li>Traditional customs</li>
+              <li>Spiritual guidance</li>
+              <li>Ritual management</li>
+              <li>Cultural education</li>
+            </ul>
+          </div>
+          
+          <div class="card">
+            <h3>Kingmakers</h3>
+            <p>The Orinas and Orios serve as kingmakers, guided by the Dezi, playing a crucial role in succession matters and major community decisions.</p>
+            <ul>
+              <li>Succession consultation</li>
+              <li>Major decisions</li>
+              <li>Traditional wisdom</li>
+              <li>Community guidance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section alt">
+        <h2>Title Creation and Management</h2>
+        <p>The OBA maintains ultimate authority over all titles within the kingdom:</p>
+        
+        <ul>
+          <li><strong>Title Creation:</strong> The OBA may create new titles as needed for community development</li>
+          <li><strong>Title Conferral:</strong> Recognition and official conferral of honorary titles</li>
+          <li><strong>Title Suspension:</strong> Temporary suspension of titles for misconduct or policy violations</li>
+          <li><strong>Title Removal:</strong> Permanent removal of titles for serious breaches of community trust</li>
+        </ul>
+        
+        <p>This flexible system allows the kingdom to adapt to changing needs while maintaining traditional authority structures.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h4>Ekpesa Kingdom</h4>
+          <p>© 2025 Ekpesa Kingdom. All rights reserved.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><a href="mailto:info@ekpesakingdom.ng">info@ekpesakingdom.ng</a></p>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <p><a href="assets/EPKESA_PDF.pdf" download>Download EPKESA PDF</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  
+  <!-- Performance: Resource Hints -->
+  <link rel="preconnect" href="https://ekpesakingdom.ng" crossorigin />
+  <link rel="preconnect" href="https://maps.googleapis.com" crossorigin />
+  <link rel="dns-prefetch" href="//maps.googleapis.com" />
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  
+  <!-- Performance: Critical CSS Inlined -->
+  <style>
+    /* Critical above-the-fold CSS for instant rendering */
+    :root{--primary:#083b2b;--accent:#d6a842;--bg:#f5f6f3;--text:#1a1a1a;--card:#fff;--max-w:1200px;--radius:12px;--serif:"Merriweather",Georgia,serif;--sans:"Poppins","Segoe UI",Arial,sans-serif}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{scroll-behavior:smooth;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.7}
+    .site-header{background:var(--primary);color:#fff;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:.6rem 2rem;max-width:var(--max-w);margin:0 auto}
+    .brand{display:flex;align-items:center;gap:1rem}
+    .brand img{height:60px;width:auto}
+    .site-title{font-family:var(--serif);font-size:1.4rem;font-weight:700;margin:0;line-height:1.2}
+    .tagline{font-size:.8rem;color:var(--accent);margin:0;line-height:1.1}
+    .hero{background:linear-gradient(rgba(8,59,43,.75),rgba(8,59,43,.85)),url('assets/hero.jpg') center/cover no-repeat;color:#fff;padding:5rem 1rem;text-align:center;position:relative}
+    .hero h2{font-family:var(--serif);font-size:2.6rem;margin-bottom:.8rem}
+    .hero .lead{max-width:700px;margin:0 auto 2rem;font-size:1.1rem;color:#f3f3f3}
+    .btn,.btn-outline{display:inline-block;padding:.8rem 1.5rem;border-radius:30px;text-decoration:none;font-weight:600;transition:all .3s ease-in-out;margin:.4rem}
+    .btn{background:var(--accent);color:var(--primary)}
+    .btn:hover{background:#c49738}
+    .btn-outline{border:2px solid #fff;color:#fff}
+    .btn-outline:hover{background:#fff;color:var(--primary)}
+    .wrap{max-width:var(--max-w);margin:0 auto;padding:0 1rem}
+    .main-nav{display:flex;align-items:center}
+    .menu{display:flex;list-style:none;gap:.5rem;align-items:center}
+    .menu a{color:#fff;text-decoration:none;font-weight:500;padding:.5rem .8rem;border-radius:6px;transition:all .3s ease-in-out}
+    .menu a:hover{color:var(--accent);background:rgba(255,255,255,.1)}
+    .menu a.active{color:var(--accent);background:rgba(255,255,255,.15)}
+    #menuBtn{display:none;border:none;background:rgba(255,255,255,.1);color:#fff;font-size:1.6rem;padding:.6rem .8rem;border-radius:8px;cursor:pointer}
+    @media (max-width:900px){.main-grid{grid-template-columns:1fr}.header-inner{padding:.8rem 1rem}.menu{display:none;position:absolute;right:1rem;top:70px;background:var(--primary);flex-direction:column;border-radius:12px;padding:.5rem 0;min-width:250px}.menu.active{display:flex}.menu a{padding:1rem 1.5rem}.hero h2{font-size:2rem}.hero .lead{font-size:1rem}}
+  </style>
+  
+  <!-- Primary Meta Tags -->
+  <title>Ekpesa Kingdom - Official Website | History, Culture & Governance of The Land of Upright People (Founded 1200 AD)</title>
+  <meta name="title" content="Ekpesa Kingdom - Official Website | History, Culture & Governance" />
+  <meta name="description" content="Discover Ekpesa Kingdom's 800+ year heritage. Official website featuring history, monarchy, governance, 22 Okpameri communities, culture, geography & authentic photos/videos of Nigeria's royal kingdom." />
+  <meta name="keywords" content="Ekpesa Kingdom, Okpameri people, Nigerian monarchy, traditional governance, Benin kingdom history, Oranmiyan, Nigerian culture, Akoko-Edo, Edo State monarchy, OBA Ekpesa, Nigerian traditional kingdoms, Okpameri communities, Nigerian heritage, traditional authority, Edo culture" />
+  <meta name="author" content="Ekpesa Kingdom" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <meta name="language" content="English" />
+  <meta name="revisit-after" content="7 days" />
+  <meta name="distribution" content="global" />
+  <meta name="rating" content="general" />
+  <meta name="copyright" content="2025 Ekpesa Kingdom" />
+  <meta name="reply-to" content="info@ekpesakingdom.ng" />
+  <meta name="web_author" content="Ekpesa Kingdom Development Team" />
+  <meta name="pagetype" content="website" />
+  <meta name="category" content="Culture, Heritage, Government, Education" />
+  <meta name="coverage" content="Nigeria, Edo State, Akoko-Edo Local Government Area" />
+  <meta name="target" content="students, researchers, cultural enthusiasts, heritage tourists" />
+  <meta name="audience" content="all" />
+  <meta name="subject" content="Ekpesa Kingdom - Nigerian Traditional Monarchy and Cultural Heritage" />
+  
+  <!-- Performance: Preload Critical Assets -->
+  <link rel="preload" href="assets/hero.jpg" as="image" />
+  <link rel="preload" href="assets/palace.jpg" as="image" />
+  <link rel="preload" href="assets/logo.png" as="image" />
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="preload" href="script.js" as="script" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://ekpesakingdom.ng/" />
+  
+  <!-- Favicons and Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon.png" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="mask-icon" href="assets/favicon.png" color="#083b2b" />
+  <meta name="msapplication-TileColor" content="#083b2b" />
+  <meta name="theme-color" content="#083b2b" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ekpesakingdom.ng/" />
+  <meta property="og:title" content="Ekpesa Kingdom - Official Website | 800+ Years of Nigerian Heritage & Culture" />
+  <meta property="og:description" content="Explore Ekpesa Kingdom's rich 800+ year heritage, traditional governance, and vibrant culture. Discover Nigeria's royal monarchy, Okpameri communities, and authentic cultural traditions." />
+  <meta property="og:image" content="https://ekpesakingdom.ng/assets/palace.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Ekpesa Kingdom Palace - Traditional authority and cultural heritage" />
+  <meta property="og:site_name" content="Ekpesa Kingdom" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="article:author" content="Ekpesa Kingdom" />
+  <meta property="article:publisher" content="https://ekpesakingdom.ng/" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://ekpesakingdom.ng/" />
+  <meta property="twitter:title" content="Ekpesa Kingdom - Official Website | Nigerian Royal Heritage" />
+  <meta property="twitter:description" content="Discover Ekpesa Kingdom's 800+ year heritage, traditional monarchy, and vibrant culture of Nigeria's Land of Upright People." />
+  <meta property="twitter:image" content="https://ekpesakingdom.ng/assets/palace.jpg" />
+  <meta property="twitter:image:alt" content="Ekpesa Kingdom Palace" />
+  <meta property="twitter:creator" content="@EkpesaKingdom" />
+  <meta property="twitter:site" content="@EkpesaKingdom" />
+  
+  <!-- Additional SEO Meta Tags -->
+  <meta name="geo.region" content="NG-ED" />
+  <meta name="geo.placename" content="Ekpesa, Akoko-Edo, Edo State, Nigeria" />
+  <meta name="geo.position" content="5.8;5.2" />
+  <meta name="ICBM" content="5.8, 5.2" />
+  <meta name="DC.title" content="Ekpesa Kingdom Official Website" />
+  <meta name="DC.creator" content="Ekpesa Kingdom" />
+  <meta name="DC.subject" content="Nigerian Traditional Monarchy and Cultural Heritage" />
+  <meta name="DC.description" content="Official website of Ekpesa Kingdom featuring 800+ years of heritage, governance, and culture" />
+  <meta name="DC.publisher" content="Ekpesa Kingdom" />
+  <meta name="DC.contributor" content="Ekpesa Kingdom Development Team" />
+  <meta name="DC.date" content="2025-01-13" />
+  <meta name="DC.type" content="Text" />
+  <meta name="DC.format" content="text/html" />
+  <meta name="DC.identifier" content="https://ekpesakingdom.ng/" />
+  <meta name="DC.source" content="https://ekpesakingdom.ng/" />
+  <meta name="DC.language" content="en" />
+  <meta name="DC.relation" content="Ekpesa Kingdom" />
+  <meta name="DC.coverage" content="Nigeria, Edo State" />
+  <meta name="DC.rights" content="© 2025 Ekpesa Kingdom" />
+  
+  <!-- Performance: Load non-critical scripts deferred -->
+  <link rel="preload" href="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkDD_tREr9fuTi7dGQharS79THbjMBDiU&callback=initMap" as="script" />
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Organization", "CulturalOrganization", "GovernmentOrganization"],
+    "name": "Ekpesa Kingdom",
+    "alternateName": "The Land of Upright People",
+    "url": "https://ekpesakingdom.ng/",
+    "logo": "https://ekpesakingdom.ng/assets/logo.png",
+    "image": [
+      "https://ekpesakingdom.ng/assets/palace.jpg",
+      "https://ekpesakingdom.ng/assets/leader_1.jpg",
+      "https://ekpesakingdom.ng/assets/hero.jpg"
+    ],
+    "description": "Official website of Ekpesa Kingdom - a traditional Nigerian monarchy with 800+ years of heritage, featuring rich cultural traditions, governance system, and the Okpameri communities across Akoko-Edo Local Government Area, Edo State, Nigeria.",
+    "foundingDate": "1200",
+    "knowsAbout": [
+      "Nigerian traditional monarchy",
+      "Okpameri culture",
+      "Benin Kingdom history",
+      "Oranmiyan heritage",
+      "Traditional governance",
+      "Nigerian cultural heritage",
+      "Akoko-Edo communities",
+      "OBA succession",
+      "Cultural festivals",
+      "Traditional authority"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+234",
+      "contactType": "information",
+      "email": "info@ekpesakingdom.ng",
+      "availableLanguage": ["English"]
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ekpesa Palace",
+      "addressLocality": "Ekpesa",
+      "addressRegion": "Edo State",
+      "postalCode": "",
+      "addressCountry": "NG"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 5.8,
+      "longitude": 5.2
+    },
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "Nigeria"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Edo State"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Akoko-Edo Local Government Area"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/EkpesaKingdom",
+      "https://www.twitter.com/EkpesaKingdom",
+      "https://www.instagram.com/EkpesaKingdom"
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Ekpesa (Founding Brother)",
+      "description": "One of four brothers who established Ekpesa Kingdom in the Okpameri region"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Cultural Heritage Information",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cultural Heritage Tours",
+            "description": "Guided tours of Ekpesa Kingdom historical sites and cultural centers"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Educational Resources",
+            "description": "Educational materials about Ekpesa Kingdom history and culture"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+  
+  <!-- BreadcrumbList Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ekpesakingdom.ng/"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Website Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Ekpesa Kingdom Official Website",
+    "alternateName": "Ekpesa Kingdom",
+    "url": "https://ekpesakingdom.ng/",
+    "description": "Official website of Ekpesa Kingdom featuring 800+ years of heritage, traditional governance, and cultural traditions of Nigeria's Land of Upright People",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://ekpesakingdom.ng/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ekpesa Kingdom",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ekpesakingdom.ng/assets/logo.png"
+      }
+    }
+  }
+  </script>
+  
+  <!-- Performance: Load non-critical CSS asynchronously -->
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+  
+  <!-- Alternative Languages -->
+  <link rel="alternate" hreflang="en" href="https://ekpesakingdom.ng/" />
+  <link rel="alternate" hreflang="x-default" href="https://ekpesakingdom.ng/" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <img src="assets/logo.png" style="height: 100px; width: 120px;" alt="Ekpesa Kingdom logo" class="logo" loading="eager" fetchpriority="high" />
+        <div>
+          <h1 class="site-title">Ekpesa Kingdom</h1>
+          <p class="tagline">The Land of Upright People</p>
+        </div>
+      </div>
+
+      <nav aria-label="Primary navigation" class="main-nav">
+        <button id="menuBtn" aria-expanded="false" aria-controls="primaryMenu">☰</button>
+        <ul id="primaryMenu" class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="video.html">Video</a></li>
+          <li><a href="kingship.html">Kingship</a></li>
+          <li><a href="structure.html">Structure</a></li>
+          <li><a href="governance.html">Governance</a></li>
+          <li><a href="okpameri.html">Okpameri</a></li>
+          <li><a href="geography.html">Geography</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home" aria-label="Hero">
+    <div class="hero-inner">
+      <h2>The Official Website of Ekpesa Kingdom</h2>
+      <p class="lead">Preserving history, culture and governance of Ekpesa — founded circa 1200 AD.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="#history">Explore Our Story</a>
+        <a class="btn-outline" href="assets/EPKESA_PDF.pdf" download>Download EPKESA PDF</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE GALLERY SECTION -->
+  <section class="gallery-section" id="gallery" aria-label="Ekpesa Kingdom Gallery">
+    <div class="wrap">
+      <div class="gallery-content">
+        <h2>Visual Heritage</h2>
+        <p class="lead">Experience the beauty and richness of Ekpesa Kingdom through these authentic photographs capturing our culture, leadership, and traditions.</p>
+        <div class="gallery-grid">
+          <div class="gallery-item large">
+            <img src="assets/palace.jpg" alt="Ekpesa Palace - The seat of traditional authority" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Royal Palace</h4>
+              <p>The seat of traditional authority and cultural heritage</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/leader_1.jpg" alt="Traditional leader representing Ekpesa heritage" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Leadership</h4>
+              <p>Royal representation</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/WhatsApp Image 2025-11-07 at 20.45.42.jpeg" alt="Community gathering in Ekpesa Kingdom" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Community Gathering</h4>
+              <p>Unity and fellowship</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/culture_1.jpg" alt="Ekpesa cultural practices and traditions" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Cultural Heritage</h4>
+              <p>Traditional practices</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/WhatsApp Image 2025-11-07 at 20.45.42 (1).jpeg" alt="Traditional ceremony and customs" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Traditional Ceremony</h4>
+              <p>Sacred customs and rituals</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/WhatsApp Image 2025-11-07 at 20.46.18.jpeg" alt="Ekpesa community life and activities" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Community Life</h4>
+              <p>Daily activities and social life</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/traditional_1.jpg" alt="Traditional Ekpesa ceremonies and customs" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Traditions</h4>
+              <p>Ceremonial customs</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/WhatsApp Image 2025-11-07 at 20.47.55.jpeg" alt="Cultural celebrations and festivities" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Cultural Celebration</h4>
+              <p>Festivals and joyous occasions</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/leader_2.jpg" alt="Community leaders of Ekpesa Kingdom" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Community Leaders</h4>
+              <p>Traditional authorities</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/WhatsApp Image 2025-11-07 at 20.49.36.jpeg" alt="Traditional attire and regalia" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Traditional Regalia</h4>
+              <p>Royal and ceremonial clothing</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/culture_2.jpg" alt="Ekpesa cultural expressions and art" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Cultural Expression</h4>
+              <p>Art and creativity</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/WhatsApp Image 2025-11-07 at 20.50.17.jpeg" alt="Community development and progress" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Community Development</h4>
+              <p>Progress and modern advancement</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO SECTION -->
+  <section class="video-section" id="video" aria-label="Ekpesa Kingdom Video">
+    <div class="wrap">
+      <div class="video-content">
+        <h2>Experience Ekpesa</h2>
+        <p class="lead">Discover the rich heritage and vibrant culture of Ekpesa Kingdom through these immersive video presentations capturing community life, traditions, and celebrations.</p>
+        
+        <!-- Primary Video -->
+        <div class="video-container primary-video">
+          <h3>Official Ekpesa Kingdom Presentation</h3>
+          <video controls poster="assets/palace.jpg" class="ekpesa-video">
+            <source src="assets/ekpesa_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Additional Community Videos -->
+        <div class="additional-videos">
+          <h3>Community Videos</h3>
+          <div class="video-grid">
+            <div class="video-item">
+              <h4>Traditional Ceremonies</h4>
+              <video controls poster="assets/WhatsApp Image 2025-11-07 at 20.45.42.jpeg" class="community-video">
+                <source src="assets/WhatsApp Video 2025-11-07 at 20.44.43.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="video-item">
+              <h4>Community Gathering</h4>
+              <video controls poster="assets/WhatsApp Image 2025-11-07 at 20.46.18.jpeg" class="community-video">
+                <source src="assets/WhatsApp Video 2025-11-07 at 20.45.16.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="video-item">
+              <h4>Cultural Celebrations</h4>
+              <video controls poster="assets/WhatsApp Image 2025-11-07 at 20.47.55.jpeg" class="community-video">
+                <source src="assets/WhatsApp Video 2025-11-07 at 20.48.19.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-info">
+          <div class="info-grid">
+            <div class="info-card">
+              <h4>Heritage & Culture</h4>
+              <p>Experience the traditions that have been preserved for over 800 years through authentic community videos.</p>
+            </div>
+            <div class="info-card">
+              <h4>Royal Legacy</h4>
+              <p>Witness the continuing legacy of the OBA and traditional leadership in live community settings.</p>
+            </div>
+            <div class="info-card">
+              <h4>Community Unity</h4>
+              <p>See how the Okpameri people maintain their cultural bonds across 22 communities through these gatherings.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main" class="wrap main-grid" role="main">
+    <aside class="sidebar" aria-label="Page tools">
+      <div class="searchbox">
+        <label for="siteSearch" class="visually-hidden">Search page</label>
+        <input id="siteSearch" type="search" placeholder="Search text (e.g. Nupe War, Oranmiyan)" />
+      </div>
+
+      <div class="quick-links">
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="#gallery">Image Gallery</a></li>
+          <li><a href="#video">Video Presentation</a></li>
+          <li><a href="#kingship">Kings & Titles</a></li>
+          <li><a href="#structure">Community Structure</a></li>
+          <li><a href="#okpameri">Okpameri Communities</a></li>
+          <li><a href="#geography">Geography</a></li>
+        </ul>
+      </div>
+
+      <div class="contact-card">
+        <h4>Contact the Palace</h4>
+        <p>Email: <a href="mailto:info@ekpesakingdom.ng">info@ekpesakingdom.ng</a></p>
+      </div>
+    </aside>
+
+    <article class="content" aria-labelledby="intro">
+      <!-- INTRO -->
+      <section id="intro" class="section">
+        <h2>Introduction</h2>
+        <p>The history of the Ekpesa Kingdom dates back to approximately <strong>1200 AD</strong> (13th century). During this period, the ancient Igodomigodo Kingdom—now known as the Benin Kingdom in present-day Edo State—sought the assistance of Oranmiyan, grandson of Oduduwa of Ile-Ife, in its struggle against the Ogisos (Onogies).</p>
+        <p>Oranmiyan’s entourage included four brothers — <strong>Ekpesa</strong>, <strong>Onumu</strong>, <strong>Somorika</strong> and <strong>Ojirami</strong> — who later settled in the Okpameri region and founded communities that remain today.</p>
+      </section>
+
+      <!-- HISTORY -->
+      <section id="history" class="section alt">
+        <h2>The Arrival of Oranmiyan & Journey to Okpameri</h2>
+
+        <h3>The Arrival of Oranmiyan in Igodomigodo</h3>
+        <p>Upon landing in Igodomigodo, Oranmiyan recognized the land and proclaimed “<em>Ibiyini</em>” (“this is the place” in Yoruba). He defeated the Ogisos, married a woman from the kingdom, and fathered Eweka — later enthroned as Eweka I. By 1295 AD Oranmiyan returned to Ile-Ife after a recall; Eweka I continued the dynasty in Benin.</p>
+
+        <h3>The Journey to Okpameri Land</h3>
+        <p>The four brothers chose not to return to Ile-Ife. They traveled from Benin into modern-day Akoko-Edo and named their settlement <strong>Akpie-Ekpesa</strong>. Local meanings:</p>
+        <ul>
+          <li><strong>Akpei</strong> — “we are one”</li>
+          <li><strong>Okpameri</strong> — “we are one people”</li>
+          <li><strong>Ekpesa</strong> — “we forbid curses”</li>
+        </ul>
+
+        <h3>Separation During the Nupe War</h3>
+        <p>In the 1500s (16th century) the Nupe invasion spread into the area. To survive, the brothers separated:</p>
+        <div class="grid-2">
+          <div class="card">
+            <p><strong>Onumu</strong> — settled in rocky surroundings.</p>
+            <p><strong>Somorika</strong> — moved up the mountains and into caves.</p>
+          </div>
+          <div class="card">
+            <p><strong>Ojirami</strong> — crossed beyond the rivers.</p>
+            <p><strong>Ekpesa</strong> — retreated deeper into the forest (descendants remain there).</p>
+          </div>
+        </div>
+        <p>Before they parted they swore a sacred oath that no bloodshed or warfare should ever erupt among their descendant communities — an oath honoured to the present day.</p>
+      </section>
+
+      <!-- KINGSHIP -->
+      <section id="kingship" class="section">
+        <h2>Kingship in Ekpesa</h2>
+        <p>Ekpesa is located on fertile flat land, ideal for farming. Historically there have been nine successive kings with seven recognized by preserved oral history after the Nupe War:</p>
+        <ol class="kings-list">
+          <li>Osenosenimi</li>
+          <li>Ugba</li>
+          <li>Ekpedugere I</li>
+          <li>Ijemebor</li>
+          <li>Aigboje</li>
+          <li>Ekpedugere II</li>
+          <li>Ekpedugere III</li>
+        </ol>
+        <p class="muted">The current king is the 7th recognized and reigning OBA of Ekpesa.</p>
+
+        <h3>Royal Titles</h3>
+        <p>The monarch is titled <strong>OBA</strong> or <strong>Okpashi</strong>. Succession protocol includes:</p>
+        <ul>
+          <li><strong>Daudu</strong> — first son (Crown Prince)</li>
+          <li><strong>Dania</strong> — second son (second in line)</li>
+          <li><strong>Deji</strong> — third son</li>
+          <li>The first daughter serves as <strong>Regent</strong> in the queen's absence</li>
+        </ul>
+      </section>
+
+      <!-- STRUCTURE -->
+      <section id="structure" class="section alt">
+        <h2>Structure of the Ekpesa Community</h2>
+        <p>Ekpesa is divided into three quarters:</p>
+        <ul>
+          <li>Ekulezu Quarters</li>
+          <li>Ubianagba Quarters</li>
+          <li>Ayanva Quarters</li>
+        </ul>
+        <p>Each quarter maintains a leadership triad:</p>
+        <ul>
+          <li><strong>Dezi</strong> — Quarter Head</li>
+          <li><strong>Orina</strong> — Cultural Head</li>
+          <li><strong>Orio</strong> — Traditional Head</li>
+        </ul>
+        <p>The Orinas and Orios are kingmakers, guided by the Dezi. There are currently <strong>47 titled chiefs (Ojas)</strong> and one surviving Ekala Chief. The OBA may create, confer, suspend, or remove titles as required.</p>
+      </section>
+
+      <!-- GOVERNANCE -->
+      <section id="governance" class="section">
+        <h2>Governance & Authority</h2>
+        <p>Ekpesa has a recognized Chairman (Mayor) handling civil administration, while the OBA retains supreme traditional authority including:</p>
+        <ul>
+          <li>Approving or suspending titled individuals</li>
+          <li>Regulating religious and community organizations</li>
+          <li>Approving cultural festivals and rites</li>
+          <li>Enforcing banishment for betrayal or misconduct</li>
+        </ul>
+        <p>All associations operating as "Ekpesa" (including diaspora unions) are required to send quarterly reports to the palace.</p>
+
+        <h3>Peace, Land & Security</h3>
+        <p>Ekpesa welcomes law-abiding settlers and visitors. However:</p>
+        <ul>
+          <li>Attempts to undermine the OBA’s authority may result in banishment.</li>
+          <li>Any attempt to cede Ekpesa land without the OBA’s approval is treasonous.</li>
+        </ul>
+      </section>
+
+      <!-- OKPAMERI -->
+      <section id="okpameri" class="section alt">
+        <h2>Okpameri — The Land & Its People</h2>
+        <p>Okpameri means "We are one." It comprises 22 culturally connected communities that share language and customs across the Akoko-Edo Local Government Area.</p>
+        <p>The region features rolling hills, rocky landscapes and fertile plains — including the historic Kukuruku Hills. According to the 2006 census the Akoko-Edo population was recorded as <strong>261,567</strong>, with Okpameri people forming the majority.</p>
+
+        <h3>Communities (Selected list)</h3>
+        <div class="communities-grid">
+          <ul>
+            <li>Aiyegunle (Osi)</li>
+            <li>Lampese</li>
+            <li>Bekuma</li>
+            <li>Makeke (Umanukeke)</li>
+            <li>Dagbala</li>
+            <li>Ogbe</li>
+            <li>Ekor</li>
+            <li>Ogugu</li>
+            <li>Ekpe</li>
+            <li>Ojah (Oza)</li>
+          </ul>
+          <ul>
+            <li>Ekpesa</li>
+            <li>Ojirami</li>
+            <li>Eshawa</li>
+            <li>Somorika</li>
+            <li>Sasaro</li>
+            <li>Ibillo</li>
+            <li>Ugboshi-Afe</li>
+            <li>Ugboshi-Ele (Ayanmi)</li>
+            <li>Ikiran-Ile (Afeyeh)</li>
+            <li>Ikiran-Oke (Ebune)</li>
+          </ul>
+          <ul>
+            <li>Onumu</li>
+            <li>Imoga (Uma)</li>
+            <li>…plus other Okpameri communities</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- GEOGRAPHY -->
+      <section id="geography" class="section">
+        <h2>Geographical Setting</h2>
+        <p>Akoko-Edo lies within longitudes <strong>4º55′–5º45′E</strong> and latitudes <strong>5º45′–6º35′N</strong>. It borders:</p>
+        <ul>
+          <li>Ondo State to the west</li>
+          <li>Kogi State to the north</li>
+          <li>Owan East and Etsako West (Edo State) to the south and east</li>
+        </ul>
+        <p>The landscape includes rocky hills, high ridges and fertile plains suitable for yam, cassava and grain cultivation. Vegetation is orchard-bush type and thicker in the south near the Onyami River and tributaries.</p>
+        
+        <!-- Google Maps Integration -->
+        <div class="map-section">
+          <h3>Location of Ekpesa Kingdom</h3>
+          <div class="map-container">
+            <div id="google-map" class="google-map"></div>
+            <div class="map-info">
+              <p><strong>📍 Ekpesa Kingdom Location</strong></p>
+              <p>Akoko-Edo Local Government Area, Edo State, Nigeria</p>
+              <p><strong>Coordinates:</strong> 5.8°N, 5.2°E (Approximate)</p>
+            </div>
+          </div>
+        </div>
+        
+        <p class="muted">Source: A History and Culture of the Okpameri since Pre-Colonial Times.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h4>Ekpesa Kingdom</h4>
+          <p>© 2025 Ekpesa Kingdom. All rights reserved.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><a href="mailto:info@ekpesakingdom.ng">info@ekpesakingdom.ng</a></p>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <p><a href="assets/EPKESA_PDF.pdf" download>Download EPKESA PDF</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

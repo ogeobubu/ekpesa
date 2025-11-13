@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kingship - Ekpesa Kingdom</title>
+  <meta name="description" content="Learn about the royal succession, titles, and governance system of Ekpesa Kingdom and the OBA." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.png" />
+  <style>
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--accent);
+    }
+    .timeline-item {
+      position: relative;
+      margin: 2rem 0;
+      padding-left: 100px;
+    }
+    .timeline-marker {
+      position: absolute;
+      left: 40px;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background: var(--accent);
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 0 0 3px var(--accent);
+    }
+    .kings-list {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .succession-chart {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .title-card {
+      background: linear-gradient(135deg, var(--primary), #0d4d36);
+      color: white;
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      text-align: center;
+      transition: var(--transition);
+    }
+    .title-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    .title-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+    .title-card p {
+      margin: 0;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Ekpesa Kingdom logo" class="logo" />
+        <div>
+          <h1 class="site-title"><a href="index.html" style="color: inherit; text-decoration: none;">Ekpesa Kingdom</a></h1>
+          <p class="tagline">The Land of Upright People</p>
+        </div>
+      </div>
+
+      <nav aria-label="Primary navigation" class="main-nav">
+        <button id="menuBtn" aria-expanded="false" aria-controls="primaryMenu">☰</button>
+        <ul id="primaryMenu" class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="video.html">Video</a></li>
+          <li><a href="kingship.html" class="active">Kingship</a></li>
+          <li><a href="structure.html">Structure</a></li>
+          <li><a href="governance.html">Governance</a></li>
+          <li><a href="okpameri.html">Okpameri</a></li>
+          <li><a href="geography.html">Geography</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap main-grid" role="main">
+    <aside class="sidebar" aria-label="Page tools">
+      <div class="searchbox">
+        <label for="siteSearch" class="visually-hidden">Search page</label>
+        <input id="siteSearch" type="search" placeholder="Search kingship content" />
+      </div>
+
+      <div class="quick-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="governance.html">Governance</a></li>
+          <li><a href="structure.html">Community Structure</a></li>
+          <li><a href="history.html">Historical Background</a></li>
+          <li><a href="okpameri.html">Okpameri Communities</a></li>
+        </ul>
+      </div>
+
+      <div class="contact-card">
+        <h4>Contact the Palace</h4>
+        <p>Email: <a href="mailto:info@ekpesakingdom.ng">info@ekpesakingdom.ng</a></p>
+      </div>
+    </aside>
+
+    <article class="content" aria-labelledby="kingship">
+      <section class="section">
+        <h2>👑 Kingship in Ekpesa</h2>
+        <p class="lead">Ekpesa is located on fertile flat land, ideal for farming. Historically there have been nine successive kings with seven recognized by preserved oral history after the Nupe War.</p>
+        
+        <div class="kings-list">
+          <h3>Recognized Kings (Oral History)</h3>
+          <ol class="kings-list">
+            <li><strong>Osenosenimi</strong> — First recognized king after the Nupe War</li>
+            <li><strong>Ugba</strong> — Continued the royal lineage</li>
+            <li><strong>Ekpedugere I</strong> — Established foundational traditions</li>
+            <li><strong>Ijemebor</strong> — Strengthened community bonds</li>
+            <li><strong>Aigboje</strong> — Expanded territory and influence</li>
+            <li><strong>Ekpedugere II</strong> — Second reign of Ekpedugere lineage</li>
+            <li><strong>Ekpedugere III</strong> — Current reigning OBA of Ekpesa</li>
+          </ol>
+          <p class="muted">The current king is the 7th recognized and reigning OBA of Ekpesa.</p>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <h2>Royal Titles and Succession</h2>
+        <p>The monarch is titled <strong>OBA</strong> or <strong>Okpashi</strong>. The royal succession follows a traditional protocol that ensures continuity and stability of leadership.</p>
+        
+        <div class="succession-chart">
+          <div class="title-card">
+            <h3>OBA / Okpashi</h3>
+            <p>The reigning monarch and supreme traditional authority of Ekpesa Kingdom</p>
+          </div>
+          <div class="title-card">
+            <h3>Daudu</h3>
+            <p>First son - Crown Prince and heir apparent to the throne</p>
+          </div>
+          <div class="title-card">
+            <h3>Dania</h3>
+            <p>Second son - Second in line to the throne</p>
+          </div>
+          <div class="title-card">
+            <h3>Deji</h3>
+            <p>Third son - Third in the line of succession</p>
+          </div>
+          <div class="title-card">
+            <h3>Regent</h3>
+            <p>First daughter who serves as regent in the queen's absence</p>
+          </div>
+          <div class="title-card">
+            <h3>47 Ojas</h3>
+            <p>Titled chiefs who support the OBA in governance and traditional functions</p>
+          </div>
+        </div>
+
+        <h3>Succession Protocol</h3>
+        <ul>
+          <li><strong>Primogeniture:</strong> Succession follows birth order within the royal family</li>
+          <li><strong>Crown Prince:</strong> The first son (Daudu) is the designated heir apparent</li>
+          <li><strong>Regency:</strong> The first daughter serves as regent when the queen is absent</li>
+          <li><strong>Royal Approval:</strong> The OBA maintains ultimate authority over succession matters</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Royal Authority and Responsibilities</h2>
+        <p>The OBA of Ekpesa holds supreme traditional authority and is responsible for:</p>
+        <ul>
+          <li>Preserving and upholding Ekpesa traditions and customs</li>
+          <li>Approving or suspending titled individuals within the kingdom</li>
+          <li>Regulating religious and community organizations</li>
+          <li>Approving cultural festivals and ceremonial rites</li>
+          <li>Maintaining peace and security within the kingdom</li>
+          <li>Making decisions regarding land and territory</li>
+        </ul>
+        
+        <h3>Royal Court Structure</h3>
+        <p>The royal court includes the OBA, 47 titled chiefs (Ojas), and one surviving Ekala Chief. The OBA may create, confer, suspend, or remove titles as required to maintain effective governance and traditional leadership.</p>
+      </section>
+
+      <section class="section alt">
+        <h2>Royal Symbols and Regalia</h2>
+        <p>The OBA and royal family maintain traditional regalia that represents the authority and heritage of Ekpesa Kingdom. These symbols include:</p>
+        <ul>
+          <li><strong>Royal Crown:</strong> Symbol of monarchy and divine authority</li>
+          <li><strong>Traditional Staffs:</strong> Emblems of leadership and traditional power</li>
+          <li><strong>Ceremonial Robes:</strong> Clothing that reflects royal status and occasion</li>
+          <li><strong>Royal Seals:</strong> Official documents and kingdom correspondence</li>
+        </ul>
+        
+        <p>These regalia are used during important ceremonies, council meetings, and cultural festivals to maintain the dignity and authority of the monarchy.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h4>Ekpesa Kingdom</h4>
+          <p>© 2025 Ekpesa Kingdom. All rights reserved.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><a href="mailto:info@ekpesakingdom.ng">info@ekpesakingdom.ng</a></p>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <p><a href="assets/EPKESA_PDF.pdf" download>Download EPKESA PDF</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

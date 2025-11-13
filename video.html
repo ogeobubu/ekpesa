@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Video Content - Ekpesa Kingdom</title>
+  <meta name="description" content="Experience Ekpesa Kingdom through immersive video presentations showcasing community life, traditions, and cultural celebrations." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.png" />
+  <style>
+    .video-page {
+      background: var(--bg);
+      padding: 2rem 1rem;
+      min-height: 100vh;
+    }
+    .video-header {
+      max-width: 1200px;
+      margin: 0 auto 3rem;
+      text-align: center;
+    }
+    .video-header h1 {
+      font-family: var(--serif);
+      color: var(--primary);
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .video-header p {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .featured-video {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin: 3rem auto;
+      max-width: 1000px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    .video-description {
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Ekpesa Kingdom logo" class="logo" />
+        <div>
+          <h1 class="site-title"><a href="index.html" style="color: inherit; text-decoration: none;">Ekpesa Kingdom</a></h1>
+          <p class="tagline">The Land of Upright People</p>
+        </div>
+      </div>
+
+      <nav aria-label="Primary navigation" class="main-nav">
+        <button id="menuBtn" aria-expanded="false" aria-controls="primaryMenu">☰</button>
+        <ul id="primaryMenu" class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="video.html" class="active">Video</a></li>
+          <li><a href="kingship.html">Kingship</a></li>
+          <li><a href="structure.html">Structure</a></li>
+          <li><a href="governance.html">Governance</a></li>
+          <li><a href="okpameri.html">Okpameri</a></li>
+          <li><a href="geography.html">Geography</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="video-page" role="main">
+    <div class="video-header">
+      <h1>Experience Ekpesa</h1>
+      <p>Discover the rich heritage and vibrant culture of Ekpesa Kingdom through these immersive video presentations capturing community life, traditions, and celebrations.</p>
+    </div>
+
+    <!-- Featured Video -->
+    <div class="featured-video">
+      <h2>Official Ekpesa Kingdom Presentation</h2>
+      <div class="video-container">
+        <video controls poster="assets/palace.jpg" class="ekpesa-video">
+          <source src="assets/ekpesa_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="video-description">
+        <p>This comprehensive presentation showcases the official heritage and culture of Ekpesa Kingdom. Experience the traditions that have been preserved for over 800 years through authentic community footage and historical narratives.</p>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <!-- Additional Community Videos -->
+      <div class="additional-videos">
+        <h3>Community Videos</h3>
+        <div class="video-grid">
+          <div class="video-item">
+            <h4>Traditional Ceremonies</h4>
+            <video controls poster="assets/WhatsApp Image 2025-11-07 at 20.45.42.jpeg" class="community-video">
+              <source src="assets/WhatsApp Video 2025-11-07 at 20.44.43.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-description">Experience authentic traditional ceremonies and sacred customs that have been passed down through generations in Ekpesa Kingdom.</p>
+          </div>
+          <div class="video-item">
+            <h4>Community Gathering</h4>
+            <video controls poster="assets/WhatsApp Image 2025-11-07 at 20.46.18.jpeg" class="community-video">
+              <source src="assets/WhatsApp Video 2025-11-07 at 20.45.16.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-description">Witness the unity and fellowship of the Ekpesa community as they come together for important gatherings and social events.</p>
+          </div>
+          <div class="video-item">
+            <h4>Cultural Celebrations</h4>
+            <video controls poster="assets/WhatsApp Image 2025-11-07 at 20.47.55.jpeg" class="community-video">
+              <source src="assets/WhatsApp Video 2025-11-07 at 20.48.19.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="video-description">Enjoy the joyous occasions and festivals that celebrate the rich cultural heritage and traditions of the Ekpesa people.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-info">
+        <div class="info-grid">
+          <div class="info-card">
+            <h4>Heritage & Culture</h4>
+            <p>Experience the traditions that have been preserved for over 800 years through authentic community videos and live demonstrations.</p>
+          </div>
+          <div class="info-card">
+            <h4>Royal Legacy</h4>
+            <p>Witness the continuing legacy of the OBA and traditional leadership in live community settings and ceremonial gatherings.</p>
+          </div>
+          <div class="info-card">
+            <h4>Community Unity</h4>
+            <p>See how the Okpameri people maintain their cultural bonds across 22 communities through these authentic gatherings and celebrations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h4>Ekpesa Kingdom</h4>
+          <p>© 2025 Ekpesa Kingdom. All rights reserved.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><a href="mailto:info@ekpesakingdom.ng">info@ekpesakingdom.ng</a></p>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <p><a href="assets/EPKESA_PDF.pdf" download>Download EPKESA PDF</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

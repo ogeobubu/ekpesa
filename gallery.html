@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gallery - Ekpesa Kingdom</title>
+  <meta name="description" content="Explore the visual heritage of Ekpesa Kingdom through authentic photographs showcasing culture, leadership, and traditions." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.png" />
+  <style>
+    .gallery-page {
+      background: var(--bg);
+      padding: 2rem 1rem;
+      min-height: 100vh;
+    }
+    .gallery-header {
+      max-width: 1200px;
+      margin: 0 auto 3rem;
+      text-align: center;
+    }
+    .gallery-header h1 {
+      font-family: var(--serif);
+      color: var(--primary);
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .gallery-header p {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .gallery-filter {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      padding: 0.6rem 1.2rem;
+      border: 2px solid var(--primary);
+      background: transparent;
+      color: var(--primary);
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--primary);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Ekpesa Kingdom logo" class="logo" />
+        <div>
+          <h1 class="site-title"><a href="index.html" style="color: inherit; text-decoration: none;">Ekpesa Kingdom</a></h1>
+          <p class="tagline">The Land of Upright People</p>
+        </div>
+      </div>
+
+      <nav aria-label="Primary navigation" class="main-nav">
+        <button id="menuBtn" aria-expanded="false" aria-controls="primaryMenu">☰</button>
+        <ul id="primaryMenu" class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="video.html">Video</a></li>
+          <li><a href="kingship.html">Kingship</a></li>
+          <li><a href="structure.html">Structure</a></li>
+          <li><a href="governance.html">Governance</a></li>
+          <li><a href="okpameri.html">Okpameri</a></li>
+          <li><a href="geography.html">Geography</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="gallery-page" role="main">
+    <div class="gallery-header">
+      <h1>Visual Heritage</h1>
+      <p>Experience the beauty and richness of Ekpesa Kingdom through these authentic photographs capturing our culture, leadership, and traditions.</p>
+    </div>
+
+    <div class="gallery-filter">
+      <button class="filter-btn active" data-filter="all">All Photos</button>
+      <button class="filter-btn" data-filter="palace">Royal Palace</button>
+      <button class="filter-btn" data-filter="leadership">Leadership</button>
+      <button class="filter-btn" data-filter="culture">Culture & Traditions</button>
+      <button class="filter-btn" data-filter="community">Community</button>
+    </div>
+
+    <div class="wrap">
+      <div class="gallery-grid">
+        <div class="gallery-item large" data-category="palace">
+          <img src="assets/palace.jpg" alt="Ekpesa Palace - The seat of traditional authority" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Royal Palace</h4>
+            <p>The seat of traditional authority and cultural heritage</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="leadership">
+          <img src="assets/leader_1.jpg" alt="Traditional leader representing Ekpesa heritage" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Leadership</h4>
+            <p>Royal representation</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="community">
+          <img src="assets/WhatsApp Image 2025-11-07 at 20.45.42.jpeg" alt="Community gathering in Ekpesa Kingdom" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Community Gathering</h4>
+            <p>Unity and fellowship</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="culture">
+          <img src="assets/culture_1.jpg" alt="Ekpesa cultural practices and traditions" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Cultural Heritage</h4>
+            <p>Traditional practices</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="culture">
+          <img src="assets/WhatsApp Image 2025-11-07 at 20.45.42 (1).jpeg" alt="Traditional ceremony and customs" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Traditional Ceremony</h4>
+            <p>Sacred customs and rituals</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="community">
+          <img src="assets/WhatsApp Image 2025-11-07 at 20.46.18.jpeg" alt="Ekpesa community life and activities" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Community Life</h4>
+            <p>Daily activities and social life</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="culture">
+          <img src="assets/traditional_1.jpg" alt="Traditional Ekpesa ceremonies and customs" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Traditions</h4>
+            <p>Ceremonial customs</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="community">
+          <img src="assets/WhatsApp Image 2025-11-07 at 20.47.55.jpeg" alt="Cultural celebrations and festivities" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Cultural Celebration</h4>
+            <p>Festivals and joyous occasions</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="leadership">
+          <img src="assets/leader_2.jpg" alt="Community leaders of Ekpesa Kingdom" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Community Leaders</h4>
+            <p>Traditional authorities</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="culture">
+          <img src="assets/WhatsApp Image 2025-11-07 at 20.49.36.jpeg" alt="Traditional attire and regalia" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Traditional Regalia</h4>
+            <p>Royal and ceremonial clothing</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="culture">
+          <img src="assets/culture_2.jpg" alt="Ekpesa cultural expressions and art" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Cultural Expression</h4>
+            <p>Art and creativity</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="community">
+          <img src="assets/WhatsApp Image 2025-11-07 at 20.50.17.jpeg" alt="Community development and progress" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Community Development</h4>
+            <p>Progress and modern advancement</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h4>Ekpesa Kingdom</h4>
+          <p>© 2025 Ekpesa Kingdom. All rights reserved.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><a href="mailto:info@ekpesakingdom.ng">info@ekpesakingdom.ng</a></p>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <p><a href="assets/EPKESA_PDF.pdf" download>Download EPKESA PDF</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script>
+    // Gallery filter functionality
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterBtns.forEach(b => b.classList.remove('active'));
+          // Add active class to clicked button
+          btn.classList.add('active');
+
+          const filter = btn.getAttribute('data-filter');
+
+          galleryItems.forEach(item => {
+            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+              item.style.display = 'block';
+              setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'scale(1)';
+              }, 10);
+            } else {
+              item.style.opacity = '0';
+              item.style.transform = 'scale(0.8)';
+              setTimeout(() => {
+                item.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

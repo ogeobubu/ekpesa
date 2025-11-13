@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Geography - Ekpesa Kingdom</title>
+  <meta name="description" content="Explore the geographical setting of Ekpesa Kingdom in Akoko-Edo, Edo State, Nigeria with interactive maps and location details." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.png" />
+  <!-- Google Maps API -->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkDD_tREr9fuTi7dGQharS79THbjMBDiU&callback=initMap">
+  </script>
+  <style>
+    .geography-page {
+      background: var(--bg);
+      padding: 2rem 1rem;
+      min-height: 100vh;
+    }
+    .geo-header {
+      max-width: 1200px;
+      margin: 0 auto 3rem;
+      text-align: center;
+    }
+    .geo-header h1 {
+      font-family: var(--serif);
+      color: var(--primary);
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .geo-header p {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .map-section {
+      margin: 3rem auto;
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 2rem;
+      max-width: 1200px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    .geo-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .location-card {
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      border-left: 4px solid var(--accent);
+    }
+    .coordinates {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Ekpesa Kingdom logo" class="logo" />
+        <div>
+          <h1 class="site-title"><a href="index.html" style="color: inherit; text-decoration: none;">Ekpesa Kingdom</a></h1>
+          <p class="tagline">The Land of Upright People</p>
+        </div>
+      </div>
+
+      <nav aria-label="Primary navigation" class="main-nav">
+        <button id="menuBtn" aria-expanded="false" aria-controls="primaryMenu">☰</button>
+        <ul id="primaryMenu" class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="video.html">Video</a></li>
+          <li><a href="kingship.html">Kingship</a></li>
+          <li><a href="structure.html">Structure</a></li>
+          <li><a href="governance.html">Governance</a></li>
+          <li><a href="okpameri.html">Okpameri</a></li>
+          <li><a href="geography.html" class="active">Geography</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="geography-page" role="main">
+    <div class="geo-header">
+      <h1>Geographical Setting</h1>
+      <p>Discover the beautiful landscape and strategic location of Ekpesa Kingdom within Nigeria's diverse geography.</p>
+    </div>
+
+    <div class="map-section">
+      <h2>📍 Location of Ekpesa Kingdom</h2>
+      <div class="map-container">
+        <div id="google-map" class="google-map"></div>
+        <div class="map-info">
+          <h3>Ekpesa Kingdom Location Details</h3>
+          <p><strong>State:</strong> Edo State</p>
+          <p><strong>Local Government:</strong> Akoko-Edo</p>
+          <p><strong>Region:</strong> Okpameri Land</p>
+          <p class="coordinates"><strong>Coordinates:</strong> 5.8°N, 5.2°E</p>
+          <p><strong>Country:</strong> Nigeria</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="geo-details">
+        <div class="location-card">
+          <h3>🗺️ Geographical Coordinates</h3>
+          <p class="coordinates">Latitude: 5°45′–6°35′N</p>
+          <p class="coordinates">Longitude: 4°55′–5°45′E</p>
+          <p>Akoko-Edo lies within these precise coordinates, placing Ekpesa strategically in the heart of Nigeria's Middle Belt region.</p>
+        </div>
+
+        <div class="location-card">
+          <h3>🌍 Bordering Areas</h3>
+          <ul>
+            <li><strong>West:</strong> Ondo State</li>
+            <li><strong>North:</strong> Kogi State</li>
+            <li><strong>South & East:</strong> Owan East and Etsako West (Edo State)</li>
+          </ul>
+          <p>This strategic location makes Ekpesa a cultural and economic crossroads between different regions of Nigeria.</p>
+        </div>
+
+        <div class="location-card">
+          <h3>🏞️ Landscape Features</h3>
+          <ul>
+            <li>Rocky hills and high ridges</li>
+            <li>Fertile plains suitable for agriculture</li>
+            <li>Historic Kukuruku Hills</li>
+            <li>Orchard-bush vegetation type</li>
+            <li>Onyami River and tributaries</li>
+          </ul>
+          <p>The diverse topography supports both traditional farming and natural biodiversity.</p>
+        </div>
+
+        <div class="location-card">
+          <h3>🌾 Agricultural Setting</h3>
+          <p>The fertile plains of Ekpesa are ideal for cultivating:</p>
+          <ul>
+            <li>Yam (major staple crop)</li>
+            <li>Cassava (food security crop)</li>
+            <li>Various grains and legumes</li>
+            <li>Cash crops suitable for the climate</li>
+          </ul>
+          <p>Agricultural abundance has supported the kingdom's population for over 800 years.</p>
+        </div>
+
+        <div class="location-card">
+          <h3>🏘️ Administrative Context</h3>
+          <p><strong>Local Government Area:</strong> Akoko-Edo</p>
+          <p><strong>State:</strong> Edo State, Nigeria</p>
+          <p><strong>Region:</strong> South-South Nigeria</p>
+          <p>Ekpesa is part of the larger Okpameri ethnic group spanning 22 communities across Akoko-Edo LGA.</p>
+        </div>
+
+        <div class="location-card">
+          <h3>🚗 Accessibility & Transportation</h3>
+          <p>Ekpesa is accessible via:</p>
+          <ul>
+            <li>Major road networks connecting to nearby towns</li>
+            <li>Proximity to regional trade centers</li>
+            <li>Connection to Abuja-Lagos corridor</li>
+            <li>Links to Benin City and other Edo State towns</li>
+          </ul>
+          <p>Strategic location supports both traditional trade and modern economic development.</p>
+        </div>
+      </div>
+
+      <div class="section" style="margin-top: 3rem;">
+        <h2>Climate and Environment</h2>
+        <p>Ekpesa enjoys a tropical climate with distinct wet and dry seasons. The vegetation is predominantly orchard-bush type, which is thicker in the southern areas near the Onyami River and its tributaries. This climate supports the kingdom's agricultural practices and provides a healthy environment for the Ekpesa people.</p>
+        
+        <h3>Environmental Features</h3>
+        <ul>
+          <li><strong>Rivers:</strong> Onyami River system provides water resources</li>
+          <li><strong>Hills:</strong> Kukuruku Hills offer natural defense and scenic beauty</li>
+          <li><strong>Vegetation:</strong> Mixed forest and savanna woodland</li>
+          <li><strong>Soil:</strong> Fertile loamy soil ideal for agriculture</li>
+        </ul>
+        
+        <p class="muted">Source: A History and Culture of the Okpameri since Pre-Colonial Times.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h4>Ekpesa Kingdom</h4>
+          <p>© 2025 Ekpesa Kingdom. All rights reserved.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><a href="mailto:info@ekpesakingdom.ng">info@ekpesakingdom.ng</a></p>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <p><a href="assets/EPKESA_PDF.pdf" download>Download EPKESA PDF</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

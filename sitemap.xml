@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://ekpesakingdom.ng/</loc>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://ekpesakingdom.ng/assets/palace.jpg</image:loc>
+      <image:title>Ekpesa Kingdom Palace - Traditional Authority</image:title>
+      <image:caption>The royal palace of Ekpesa Kingdom, seat of traditional authority and cultural heritage</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ekpesakingdom.ng/assets/hero.jpg</image:loc>
+      <image:title>Ekpesa Kingdom Hero Image</image:title>
+      <image:caption>Official website of Ekpesa Kingdom - The Land of Upright People</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- History Page -->
+  <url>
+    <loc>https://ekpesakingdom.ng/history.html</loc>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://ekpesakingdom.ng/assets/culture_1.jpg</image:loc>
+      <image:title>Ekpesa Cultural Heritage</image:title>
+      <image:caption>Traditional practices and cultural heritage of Ekpesa Kingdom dating back to 1200 AD</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Gallery Page -->
+  <url>
+    <loc>https://ekpesakingdom.ng/gallery.html</loc>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://ekpesakingdom.ng/assets/leader_1.jpg</image:loc>
+      <image:title>Ekpesa Kingdom Leadership</image:title>
+      <image:caption>Traditional leadership representing Ekpesa heritage and royal authority</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ekpesakingdom.ng/assets/leader_2.jpg</image:loc>
+      <image:title>Community Leaders</image:title>
+      <image:caption>Community leaders of Ekpesa Kingdom showing traditional authorities</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ekpesakingdom.ng/assets/culture_2.jpg</image:loc>
+      <image:title>Cultural Expression</image:title>
+      <image:caption>Ekpesa cultural expressions and traditional art forms</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ekpesakingdom.ng/assets/traditional_1.jpg</image:loc>
+      <image:title>Traditional Ceremonies</image:title>
+      <image:caption>Traditional Ekpesa ceremonies and customs preserved for centuries</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ekpesakingdom.ng/assets/traditional_2.jpg</image:loc>
+      <image:title>Cultural Traditions</image:title>
+      <image:caption>Deep-rooted cultural traditions of Ekpesa Kingdom</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Video Page -->
+  <url>
+    <loc>https://ekpesakingdom.ng/video.html</loc>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://ekpesakingdom.ng/assets/palace.jpg</video:thumbnail_loc>
+      <video:title>Official Ekpesa Kingdom Presentation</video:title>
+      <video:description>Immersive video presentation showcasing Ekpesa Kingdom's rich heritage, culture, and traditions spanning over 800 years of history.</video:description>
+      <video:content_loc>https://ekpesakingdom.ng/assets/ekpesa_video.mp4</video:content_loc>
+      <video:duration>300</video:duration>
+      <video:publication_date>2025-01-13</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:tag>Ekpesa Kingdom</video:tag>
+      <video:tag>Nigerian culture</video:tag>
+      <video:tag>traditional monarchy</video:tag>
+      <video:tag>Okpameri people</video:tag>
+      <video:tag>Nigerian heritage</video:tag>
+    </video:video>
+  </url>
+  
+  <!-- Kingship Page -->
+  <url>
+    <loc>https://ekpesakingdom.ng/kingship.html</loc>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Structure Page -->
+  <url>
+    <loc>https://ekpesakingdom.ng/structure.html</loc>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Governance Page -->
+  <url>
+    <loc>https://ekpesakingdom.ng/governance.html</loc>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Okpameri Page -->
+  <url>
+    <loc>https://ekpesakingdom.ng/okpameri.html</loc>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Geography Page -->
+  <url>
+    <loc>https://ekpesakingdom.ng/geography.html</loc>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+</urlset>

@@ -224,22 +224,163 @@
           const filter = btn.getAttribute('data-filter');
 
           galleryItems.forEach(item => {
-            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            const shouldShow = filter === 'all' || item.getAttribute('data-category') === filter;
+            
+            if (shouldShow) {
               item.style.display = 'block';
-              setTimeout(() => {
-                item.style.opacity = '1';
-                item.style.transform = 'scale(1)';
-              }, 10);
+              item.style.opacity = '1';
+              item.style.transform = 'scale(1)';
+              item.style.pointerEvents = 'auto'; // Enable clicking
             } else {
               item.style.opacity = '0';
               item.style.transform = 'scale(0.8)';
+              item.style.pointerEvents = 'none'; // Disable clicking on hidden items
+              
+              // Only hide after animation completes
               setTimeout(() => {
-                item.style.display = 'none';
+                if (item.style.opacity === '0') {
+                  item.style.display = 'none';
+                }
               }, 300);
             }
           });
+          
+          // Re-initialize modal after filtering to only include visible items
+          setTimeout(() => {
+            if (window.initializeGallery) {
+              window.initializeGallery();
+            }
+          }, 350);
         });
       });
+    });
+  </script>
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="modal">
+    <div class="modal-click-catcher" onclick="closeModal()"></div>
+    <div class="modal-content">
+      <span class="modal-close" id="modalClose" onclick="closeModal()">&times;</span>
+      <span class="modal-nav prev" onclick="prevImage()">‹</span>
+      <img class="modal-image" id="modalImage" src="" alt="">
+      <span class="modal-nav next" onclick="nextImage()">›</span>
+      <div class="modal-info">
+        <h4 id="modalTitle"></h4>
+        <p id="modalDescription"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Modal functionality
+    let currentImageIndex = 0;
+    let galleryImages = [];
+
+    // Initialize gallery images
+    function initializeGallery() {
+      const galleryItems = document.querySelectorAll('.gallery-item');
+      galleryImages = Array.from(galleryItems).map(item => {
+        const img = item.querySelector('img');
+        const title = item.querySelector('.gallery-overlay h4').textContent;
+        const description = item.querySelector('.gallery-overlay p').textContent;
+        return {
+          src: img.src,
+          alt: img.alt,
+          title: title,
+          description: description
+        };
+      });
+
+      // Add click listeners to gallery items
+      galleryItems.forEach((item, index) => {
+        item.addEventListener('click', () => openModal(index));
+        item.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openModal(index);
+          }
+        });
+        // Make items focusable for accessibility
+        item.setAttribute('tabindex', '0');
+        item.setAttribute('role', 'button');
+        item.setAttribute('aria-label', `View ${item.querySelector('.gallery-overlay h4').textContent} in full size`);
+      });
+    }
+
+    function openModal(index) {
+      currentImageIndex = index;
+      const image = galleryImages[index];
+      
+      document.getElementById('modalImage').src = image.src;
+      document.getElementById('modalImage').alt = image.alt;
+      document.getElementById('modalTitle').textContent = image.title;
+      document.getElementById('modalDescription').textContent = image.description;
+      
+      document.getElementById('imageModal').classList.add('active');
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      
+      // Focus management for accessibility
+      document.getElementById('modalClose').focus();
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').classList.remove('active');
+      document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+
+    function nextImage() {
+      currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+      openModal(currentImageIndex);
+    }
+
+    function prevImage() {
+      currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+      openModal(currentImageIndex);
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('imageModal');
+      if (modal && modal.classList.contains('active')) {
+        switch(e.key) {
+          case 'Escape':
+            e.preventDefault();
+            closeModal();
+            break;
+          case 'ArrowRight':
+            e.preventDefault();
+            nextImage();
+            break;
+          case 'ArrowLeft':
+            e.preventDefault();
+            prevImage();
+            break;
+        }
+      }
+    });
+
+    // Close modal when clicking outside the image
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('imageModal');
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target.id === 'imageModal' || e.target.classList.contains('modal-click-catcher')) {
+            closeModal();
+          }
+        });
+      }
+    });
+
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      initializeGallery();
+      
+      // Make functions globally accessible for onclick handlers
+      window.openModal = openModal;
+      window.closeModal = closeModal;
+      window.nextImage = nextImage;
+      window.prevImage = prevImage;
+      window.initializeGallery = initializeGallery;
     });
   </script>
 </body>

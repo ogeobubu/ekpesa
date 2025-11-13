@@ -3,8 +3,8 @@
  * Advanced caching strategy for lightning-fast loading
  */
 
-const CACHE_NAME = 'ekpesa-kingdom-v1.2.0';
-const CACHE_VERSION = '1.2.0';
+const CACHE_NAME = 'ekpesa-kingdom-v1.2.1';
+const CACHE_VERSION = '1.2.1';
 
 // Cache size limits
 const MAX_CACHE_ENTRIES = 100;
@@ -62,8 +62,13 @@ function shouldCache(url) {
  * Get cache key with version
  */
 function getCacheKey(request) {
-  const url = new URL(request.url);
-  return `${CACHE_VERSION}:${url.pathname}${url.search}`;
+  try {
+    const url = new URL(request.url);
+    return `${CACHE_VERSION}:${url.pathname}${url.search}`;
+  } catch (error) {
+    console.warn('Ekpesa Kingdom SW: Invalid URL for cache key:', request.url);
+    return `${CACHE_VERSION}:${request.url}`;
+  }
 }
 
 /**
@@ -148,7 +153,7 @@ async function enhancedFetch(request) {
     
     // If cached and not stale, return it
     if (cachedResponse && !isStale(cachedResponse)) {
-      // Update cache in background
+      // Update cache in background (don't wait for it)
       fetch(request).then(networkResponse => {
         if (networkResponse.ok) {
           cache.put(request, networkResponse.clone());
@@ -170,10 +175,25 @@ async function enhancedFetch(request) {
       }
       return networkResponse;
     } catch (error) {
-      // If network fails and we have a stale cached response, return it
+      // If network fails and we have any cached response (even stale), return it
       if (cachedResponse) {
+        console.warn('Ekpesa Kingdom SW: Network failed, using stale cache for', request.url);
         return cachedResponse;
       }
+      
+      // If no cache available, return a basic error response
+      console.warn('Ekpesa Kingdom SW: Network failed and no cache available for', request.url);
+      
+      // For images, return a transparent 1x1 pixel
+      if (url.pathname.match(/\.(?:png|jpg|jpeg|gif|webp|svg)$/)) {
+        return new Response('', {
+          status: 200,
+          statusText: 'OK',
+          headers: { 'Content-Type': 'image/png' }
+        });
+      }
+      
+      // For other resources, just pass through the fetch
       throw error;
     }
   }
@@ -198,9 +218,12 @@ self.addEventListener('install', (event) => {
         if (response.ok || response.type === 'opaque') {
           await cache.put(resource, response);
           console.log('Ekpesa Kingdom SW: Cached', resource);
+        } else {
+          console.warn('Ekpesa Kingdom SW: Failed to cache (bad response)', resource, response.status);
         }
       } catch (error) {
-        console.warn('Ekpesa Kingdom SW: Failed to cache', resource, error);
+        // Don't fail the entire installation for individual resource failures
+        console.warn('Ekpesa Kingdom SW: Failed to cache (network error)', resource, error.message);
       }
     });
 
@@ -236,9 +259,17 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Skip cross-origin requests (except for our own domain)
+  // Skip cross-origin requests (except for our own domain and Google services)
   const url = new URL(request.url);
-  if (url.origin !== location.origin && !url.hostname.includes('ekpesakingdom.netlify.app')) {
+  const allowedOrigins = [
+    location.origin,
+    'https://ekpesakingdom.netlify.app',
+    'https://fonts.googleapis.com',
+    'https://maps.googleapis.com',
+    'https://ekpesakingdom.ng'
+  ];
+  
+  if (!allowedOrigins.includes(url.origin)) {
     return;
   }
 

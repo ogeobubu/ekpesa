@@ -3,11 +3,11 @@
 > **The Land of Upright People** - A digital heritage platform preserving 800+ years of Nigerian traditional monarchy and culture with lightning-fast performance
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Built with Love in Nigeria](https://img.shields.io/badge/Built%20with-Love%20in%20Nigeria-red.svg)](https://ekpesakingdom.ng)
-[![SEO Optimized](https://img.shields.io/badge/SEO-Optimized-green.svg)](https://ekpesakingdom.ng)
-[![Lightning Fast](https://img.shields.io/badge/Performance-Lightning%20Fast-orange.svg)](https://ekpesakingdom.ng)
-[![PWA Ready](https://img.shields.io/badge/PWA-Ready-purple.svg)](https://ekpesakingdom.ng)
-[![Core Web Vitals](https://img.shields.io/badge/Core%20Web%20Vitals-Excellent-brightgreen.svg)](https://ekpesakingdom.ng)
+[![Built with Love in Nigeria](https://img.shields.io/badge/Built%20with-Love%20in%20Nigeria-red.svg)](https://ekpesakingdom.netlify.app)
+[![SEO Optimized](https://img.shields.io/badge/SEO-Optimized-green.svg)](https://ekpesakingdom.netlify.app)
+[![Lightning Fast](https://img.shields.io/badge/Performance-Lightning%20Fast-orange.svg)](https://ekpesakingdom.netlify.app)
+[![PWA Ready](https://img.shields.io/badge/PWA-Ready-purple.svg)](https://ekpesakingdom.netlify.app)
+[![Core Web Vitals](https://img.shields.io/badge/Core%20Web%20Vitals-Excellent-brightgreen.svg)](https://ekpesakingdom.netlify.app)
 
 ## 🏛️ About Ekpesa Kingdom
 
@@ -145,7 +145,7 @@ npx lighthouse http://localhost:8000 --view
 ### Production Deployment
 
 1. **Upload all files** to your web hosting provider
-2. **Configure domain** (e.g., ekpesakingdom.ng)
+2. **Configure domain** (e.g., ekpesakingdom.netlify.app)
 3. **Enable HTTPS** (required for PWA functionality)
 4. **Configure GZIP compression** on your server
 5. **Submit sitemap** to Google Search Console
@@ -347,8 +347,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👥 Community & Support
 
 ### Contact Information
-- **Email**: [info@ekpesakingdom.ng](mailto:info@ekpesakingdom.ng)
-- **Website**: [https://ekpesakingdom.ng](https://ekpesakingdom.ng)
+- **Email**: [info@ekpesakingdom.netlify.app](mailto:info@ekpesakingdom.netlify.app)
+- **Website**: [https://ekpesakingdom.netlify.app](https://ekpesakingdom.netlify.app)
 - **Cultural Consultation**: Through traditional council representatives
 
 ### Performance Support
@@ -398,12 +398,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Quick Links
 
-- [🏠 Official Website](https://ekpesakingdom.ng)
-- [📜 History](https://ekpesakingdom.ng/history.html)
-- [📸 Gallery](https://ekpesakingdom.ng/gallery.html)
-- [🎬 Videos](https://ekpesakingdom.ng/video.html)
-- [👑 Kingship](https://ekpesakingdom.ng/kingship.html)
-- [🏛️ Structure](https://ekpesakingdom.ng/structure.html)
-- [⚖️ Governance](https://ekpesakingdom.ng/governance.html)
-- [🌍 Okpameri](https://ekpesakingdom.ng/okpameri.html)
-- [🗺️ Geography](https://ekpesakingdom.ng/geography.html)
+- [🏠 Official Website](https://ekpesakingdom.netlify.app)
+- [📜 History](https://ekpesakingdom.netlify.app/history.html)
+- [📸 Gallery](https://ekpesakingdom.netlify.app/gallery.html)
+- [🎬 Videos](https://ekpesakingdom.netlify.app/video.html)
+- [👑 Kingship](https://ekpesakingdom.netlify.app/kingship.html)
+- [🏛️ Structure](https://ekpesakingdom.netlify.app/structure.html)
+- [⚖️ Governance](https://ekpesakingdom.netlify.app/governance.html)
+- [🌍 Okpameri](https://ekpesakingdom.netlify.app/okpameri.html)
+- [🗺️ Geography](https://ekpesakingdom.netlify.app/geography.html)

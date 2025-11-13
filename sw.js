@@ -238,7 +238,7 @@ self.addEventListener('fetch', (event) => {
 
   // Skip cross-origin requests (except for our own domain)
   const url = new URL(request.url);
-  if (url.origin !== location.origin && !url.hostname.includes('ekpesakingdom.ng')) {
+  if (url.origin !== location.origin && !url.hostname.includes('ekpesakingdom.netlify.app')) {
     return;
   }
 

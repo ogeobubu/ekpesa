@@ -43,4 +43,4 @@ Disallow: /*.json$
 Disallow: /temp/
 
 # Host directive
-Host: https://ekpesakingdom.ng
+Host: https://ekpesakingdom.netlify.app

@@ -52,6 +52,63 @@
       background: var(--primary);
       color: white;
     }
+
+    /* Simple Modal Styles */
+    #simpleModal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    #simpleModal.active {
+      display: flex;
+    }
+    
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+      position: relative;
+    }
+    
+    .modal-image {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 8px;
+    }
+    
+    .modal-close {
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+      background: rgba(0,0,0,0.5);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .modal-close:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    
+    @media (max-width: 768px) {
+      .modal-close {
+        top: 10px;
+        right: 10px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -207,6 +264,14 @@
     </div>
   </footer>
 
+  <!-- Simple Modal -->
+  <div id="simpleModal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <img class="modal-image" id="modalImage" src="" alt="">
+    </div>
+  </div>
+
   <script src="script.js" defer></script>
   <script>
     // Gallery filter functionality
@@ -244,144 +309,84 @@
               }, 300);
             }
           });
-          
-          // Re-initialize modal after filtering to only include visible items
-          setTimeout(() => {
-            if (window.initializeGallery) {
-              window.initializeGallery();
-            }
-          }, 350);
         });
       });
     });
-  </script>
 
-  <!-- Image Modal -->
-  <div id="imageModal" class="modal">
-    <div class="modal-click-catcher" onclick="closeModal()"></div>
-    <div class="modal-content">
-      <span class="modal-close" id="modalClose" onclick="closeModal()">&times;</span>
-      <span class="modal-nav prev" onclick="prevImage()">‹</span>
-      <img class="modal-image" id="modalImage" src="" alt="">
-      <span class="modal-nav next" onclick="nextImage()">›</span>
-      <div class="modal-info">
-        <h4 id="modalTitle"></h4>
-        <p id="modalDescription"></p>
-      </div>
-    </div>
-  </div>
+    // Simple Modal functionality
+    let currentImageData = null;
 
-  <script>
-    // Modal functionality
-    let currentImageIndex = 0;
-    let galleryImages = [];
-
-    // Initialize gallery images
-    function initializeGallery() {
-      const galleryItems = document.querySelectorAll('.gallery-item');
-      galleryImages = Array.from(galleryItems).map(item => {
-        const img = item.querySelector('img');
-        const title = item.querySelector('.gallery-overlay h4').textContent;
-        const description = item.querySelector('.gallery-overlay p').textContent;
-        return {
-          src: img.src,
-          alt: img.alt,
-          title: title,
-          description: description
-        };
-      });
-
-      // Add click listeners to gallery items
-      galleryItems.forEach((item, index) => {
-        item.addEventListener('click', () => openModal(index));
-        item.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            openModal(index);
-          }
-        });
-        // Make items focusable for accessibility
-        item.setAttribute('tabindex', '0');
-        item.setAttribute('role', 'button');
-        item.setAttribute('aria-label', `View ${item.querySelector('.gallery-overlay h4').textContent} in full size`);
-      });
-    }
-
-    function openModal(index) {
-      currentImageIndex = index;
-      const image = galleryImages[index];
+    function showImageModal(imageSrc, imageAlt) {
+      console.log('Showing modal for:', imageSrc);
       
-      document.getElementById('modalImage').src = image.src;
-      document.getElementById('modalImage').alt = image.alt;
-      document.getElementById('modalTitle').textContent = image.title;
-      document.getElementById('modalDescription').textContent = image.description;
+      const modal = document.getElementById('simpleModal');
+      const modalImg = document.getElementById('modalImage');
       
-      document.getElementById('imageModal').classList.add('active');
-      document.body.style.overflow = 'hidden'; // Prevent background scrolling
-      
-      // Focus management for accessibility
-      document.getElementById('modalClose').focus();
-    }
-
-    function closeModal() {
-      document.getElementById('imageModal').classList.remove('active');
-      document.body.style.overflow = 'auto'; // Restore scrolling
-    }
-
-    function nextImage() {
-      currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-      openModal(currentImageIndex);
-    }
-
-    function prevImage() {
-      currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
-      openModal(currentImageIndex);
-    }
-
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-      const modal = document.getElementById('imageModal');
-      if (modal && modal.classList.contains('active')) {
-        switch(e.key) {
-          case 'Escape':
-            e.preventDefault();
-            closeModal();
-            break;
-          case 'ArrowRight':
-            e.preventDefault();
-            nextImage();
-            break;
-          case 'ArrowLeft':
-            e.preventDefault();
-            prevImage();
-            break;
-        }
+      if (modal && modalImg) {
+        modalImg.src = imageSrc;
+        modalImg.alt = imageAlt;
+        modal.classList.add('active');
+        console.log('Modal should now be visible');
+      } else {
+        console.error('Modal elements not found');
       }
-    });
+    }
 
-    // Close modal when clicking outside the image
+    function hideImageModal() {
+      const modal = document.getElementById('simpleModal');
+      if (modal) {
+        modal.classList.remove('active');
+      }
+    }
+
+    // Initialize gallery click handlers
     document.addEventListener('DOMContentLoaded', () => {
-      const modal = document.getElementById('imageModal');
+      console.log('Initializing gallery click handlers...');
+      
+      const galleryItems = document.querySelectorAll('.gallery-item');
+      console.log('Found', galleryItems.length, 'gallery items');
+      
+      galleryItems.forEach((item, index) => {
+        const img = item.querySelector('img');
+        if (img) {
+          // Add click handler directly to image
+          img.style.cursor = 'pointer';
+          img.addEventListener('click', (e) => {
+            console.log('Image clicked:', index, img.src);
+            e.preventDefault();
+            showImageModal(img.src, img.alt);
+          });
+          
+          console.log('Click handler added to image', index);
+        }
+      });
+      
+      // Close modal handlers
+      const modal = document.getElementById('simpleModal');
+      const closeBtn = document.querySelector('.modal-close');
+      
+      if (closeBtn) {
+        closeBtn.addEventListener('click', hideImageModal);
+      }
+      
       if (modal) {
         modal.addEventListener('click', (e) => {
-          if (e.target.id === 'imageModal' || e.target.classList.contains('modal-click-catcher')) {
-            closeModal();
+          if (e.target === modal) {
+            hideImageModal();
           }
         });
       }
-    });
-
-    // Initialize when DOM is loaded
-    document.addEventListener('DOMContentLoaded', () => {
-      initializeGallery();
       
-      // Make functions globally accessible for onclick handlers
-      window.openModal = openModal;
-      window.closeModal = closeModal;
-      window.nextImage = nextImage;
-      window.prevImage = prevImage;
-      window.initializeGallery = initializeGallery;
+      // Keyboard handlers
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          hideImageModal();
+        }
+      });
+      
+      console.log('Gallery initialization complete');
     });
   </script>
+
 </body>
 </html>

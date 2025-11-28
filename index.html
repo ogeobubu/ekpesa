@@ -314,7 +314,7 @@
       <p class="lead">Preserving history, culture and governance of Ekpesa — founded circa 1200 AD.</p>
       <div class="hero-ctas">
         <a class="btn" href="#history">Explore Our Story</a>
-        <a class="btn-outline" href="assets/EPKESA_PDF.pdf" download>Download EPKESA PDF</a>
+        <a class="btn-outline" href="assets/EKPESA_PDF.pdf" download>Download EKPESA PDF</a>
       </div>
     </div>
   </section>
@@ -547,7 +547,7 @@
         <h2>Kingship in Ekpesa</h2>
         <p>Ekpesa is located on fertile flat land, ideal for farming. Historically there have been nine successive kings with seven recognized by preserved oral history after the Nupe War:</p>
         <ol class="kings-list">
-          <li>Osenosenimi</li>
+          <li>Uzenosenimi</li>
           <li>Ugba</li>
           <li>Ekpedugere I</li>
           <li>Ijemebor</li>
@@ -578,11 +578,11 @@
         </ul>
         <p>Each quarter maintains a leadership triad:</p>
         <ul>
-          <li><strong>Dezi</strong> — Quarter Head</li>
+          <li><strong>Desi</strong> — Quarter Head</li>
           <li><strong>Orina</strong> — Cultural Head</li>
           <li><strong>Orio</strong> — Traditional Head</li>
         </ul>
-        <p>The Orinas and Orios are kingmakers, guided by the Dezi. There are currently <strong>47 titled chiefs (Ojas)</strong> and one surviving Ekala Chief. The OBA may create, confer, suspend, or remove titles as required.</p>
+        <p>The Orinas and Orios are kingmakers, guided by the Desi. There are currently <strong>47 titled chiefs (Ojas)</strong> and one surviving Ekala Chief. The OBA may create, confer, suspend, or remove titles as required.</p>
       </section>
 
       <!-- GOVERNANCE -->
@@ -687,7 +687,7 @@
         </div>
         <div>
           <h4>Resources</h4>
-          <p><a href="assets/EPKESA_PDF.pdf" download>Download EPKESA PDF</a></p>
+          <p><a href="assets/EKPESA_PDF.pdf" download>Download EKESA PDF</a></p>
         </div>
       </div>
     </div>
@@ -695,126 +695,79 @@
   <script src="script.js" defer></script>
 
   <!-- Image Modal -->
-  <div id="imageModal" class="modal">
-    <div class="modal-click-catcher" onclick="closeModal()"></div>
-    <div class="modal-content">
-      <span class="modal-close" id="modalClose" onclick="closeModal()">&times;</span>
-      <span class="modal-nav prev" onclick="prevImage()">‹</span>
-      <img class="modal-image" id="modalImage" src="" alt="">
-      <span class="modal-nav next" onclick="nextImage()">›</span>
-      <div class="modal-info">
-        <h4 id="modalTitle"></h4>
-        <p id="modalDescription"></p>
-      </div>
+  <div id="simpleModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); z-index: 9999; align-items: center; justify-content: center;">
+    <div class="modal-content" style="max-width: 90%; max-height: 90%; position: relative;">
+      <span class="modal-close" onclick="hideImageModal()" style="position: absolute; top: -40px; right: -40px; color: white; font-size: 40px; cursor: pointer; background: rgba(0,0,0,0.5); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">&times;</span>
+      <img class="modal-image" id="modalImage" src="" alt="" style="max-width: 100%; max-height: 100%; border-radius: 8px;">
     </div>
   </div>
 
   <script>
-    // Modal functionality for homepage gallery
-    let currentImageIndex = 0;
-    let galleryImages = [];
-
-    // Initialize gallery images for homepage
-    function initializeHomepageGallery() {
-      const galleryItems = document.querySelectorAll('.gallery-section .gallery-item');
-      galleryImages = Array.from(galleryItems).map(item => {
-        const img = item.querySelector('img');
-        const title = item.querySelector('.gallery-overlay h4').textContent;
-        const description = item.querySelector('.gallery-overlay p').textContent;
-        return {
-          src: img.src,
-          alt: img.alt,
-          title: title,
-          description: description
-        };
-      });
-
-      // Add click listeners to gallery items
-      galleryItems.forEach((item, index) => {
-        item.addEventListener('click', () => openModal(index));
-        item.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            openModal(index);
-          }
-        });
-        // Make items focusable for accessibility
-        item.setAttribute('tabindex', '0');
-        item.setAttribute('role', 'button');
-        item.setAttribute('aria-label', `View ${item.querySelector('.gallery-overlay h4').textContent} in full size`);
-      });
-    }
-
-    function openModal(index) {
-      currentImageIndex = index;
-      const image = galleryImages[index];
+    // Simple Modal functionality for homepage gallery
+    function showImageModal(imageSrc, imageAlt) {
+      console.log('Showing modal for:', imageSrc);
       
-      document.getElementById('modalImage').src = image.src;
-      document.getElementById('modalImage').alt = image.alt;
-      document.getElementById('modalTitle').textContent = image.title;
-      document.getElementById('modalDescription').textContent = image.description;
+      const modal = document.getElementById('simpleModal');
+      const modalImg = document.getElementById('modalImage');
       
-      document.getElementById('imageModal').classList.add('active');
-      document.body.style.overflow = 'hidden'; // Prevent background scrolling
-      
-      // Focus management for accessibility
-      document.getElementById('modalClose').focus();
-    }
-
-    function closeModal() {
-      document.getElementById('imageModal').classList.remove('active');
-      document.body.style.overflow = 'auto'; // Restore scrolling
-    }
-
-    function nextImage() {
-      currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-      openModal(currentImageIndex);
-    }
-
-    function prevImage() {
-      currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
-      openModal(currentImageIndex);
-    }
-
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-      const modal = document.getElementById('imageModal');
-      if (modal && modal.classList.contains('active')) {
-        switch(e.key) {
-          case 'Escape':
-            e.preventDefault();
-            closeModal();
-            break;
-          case 'ArrowRight':
-            e.preventDefault();
-            nextImage();
-            break;
-          case 'ArrowLeft':
-            e.preventDefault();
-            prevImage();
-            break;
-        }
+      if (modal && modalImg) {
+        modalImg.src = imageSrc;
+        modalImg.alt = imageAlt;
+        modal.style.display = 'flex';
+        console.log('Modal should now be visible');
+      } else {
+        console.error('Modal elements not found');
       }
-    });
+    }
 
-    // Close modal when clicking outside the image
+    function hideImageModal() {
+      const modal = document.getElementById('simpleModal');
+      if (modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Initialize gallery click handlers for homepage
     document.addEventListener('DOMContentLoaded', () => {
-      const modal = document.getElementById('imageModal');
+      console.log('Initializing homepage gallery click handlers...');
+      
+      const galleryItems = document.querySelectorAll('.gallery-section .gallery-item');
+      console.log('Found', galleryItems.length, 'gallery items on homepage');
+      
+      galleryItems.forEach((item, index) => {
+        const img = item.querySelector('img');
+        if (img) {
+          // Add click handler directly to image
+          img.style.cursor = 'pointer';
+          img.addEventListener('click', (e) => {
+            console.log('Image clicked:', index, img.src);
+            e.preventDefault();
+            showImageModal(img.src, img.alt);
+          });
+          
+          console.log('Click handler added to image', index);
+        }
+      });
+      
+      // Close modal handlers
+      const modal = document.getElementById('simpleModal');
+      
       if (modal) {
         modal.addEventListener('click', (e) => {
-          if (e.target.id === 'imageModal' || e.target.classList.contains('modal-click-catcher')) {
-            closeModal();
+          if (e.target === modal) {
+            hideImageModal();
           }
         });
       }
-      initializeHomepageGallery();
       
-      // Make functions globally accessible for onclick handlers
-      window.openModal = openModal;
-      window.closeModal = closeModal;
-      window.nextImage = nextImage;
-      window.prevImage = prevImage;
-      window.initializeHomepageGallery = initializeHomepageGallery;
+      // Keyboard handlers
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          hideImageModal();
+        }
+      });
+      
+      console.log('Homepage gallery initialization complete');
     });
   </script>
 </body>
